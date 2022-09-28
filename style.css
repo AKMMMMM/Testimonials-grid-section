@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: var(--Light-grayish-blue);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 1.5rem;
+  grid-template-areas:
+    "one one two five"
+    "three four four five";
+  padding: 5.2rem;
+}
+.grid {
+  border-radius: 0.4rem;
+  padding: 1.25rem;
+}
+
+.grid:nth-child(1) {
+  grid-area: one;
+  background: var(--Moderate-violet) url("/images/bg-pattern-quotation.svg")
+    no-repeat right 20% top;
+}
+.grid:nth-child(1) img {
+  border: 0.188rem solid hsl(263, 55%, 52%);
+}
+.grid:nth-child(2) {
+  grid-area: two;
+  background-color: hsl(217, 19%, 35%);
+}
+.grid:nth-child(3) {
+  grid-area: three;
+  background-color: var(--White);
+}
+.grid:nth-child(4) {
+  grid-area: four;
+  background-color: var(--Very-dark-blackish-blue);
+}
+.text-white {
+  color: var(--White);
+  font-size: 0.9rem;
+}
+.text-grey {
+  color: var(--Very-dark-grayish-blue);
+  font-size: 0.9rem;
+}
+.grid:nth-child(4) img {
+  border: 0.188rem solid hsl(263, 55%, 52%);
+}
+.grid:nth-child(5) {
+  grid-area: five;
+  background-color: var(--White);
+}
+img {
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+}
+.details {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+p {
+  color: var(--Light-gray);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+h1 {
+  color: white;
+  font-size: 1.1rem;
+  margin: 1.25rem 0;
+}
+
+.title {
+  color: var(--Very-dark-blackish-blue);
+}
+
+.text-dark {
+  color: var(--Very-dark-grayish-blue);
+}
+
+@media (max-width: 700px) {
+  article {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+}
